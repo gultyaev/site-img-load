@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<style>
+		.img-load {
+			display: inline-block;
+			height: 200px;
+			width: 200px;
+			padding: 0;
+			margin: 10px;
+		}
+	</style>
+	
+	<section class="img-cont">
+		<img class="img-load" data-src="img/img (0).jpeg" alt="pic">
+		<img class="img-load" data-src="img/img (1).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (2).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (3).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (4).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (5).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (6).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (7).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (8).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (9).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (10).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (11).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (12).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (13).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (14).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (15).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (16).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (17).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (18).jpg" alt="pic">
+		<img class="img-load" data-src="img/img (19).jpg" alt="pic">
+	</section>
+
+	<script>
+		var img = document.querySelectorAll('.img-load');
+		[].forEach.call(img, function () {
+			this.addEventListener('load', function() {
+				[].forEach.call(img, function(e) {
+					e.src = e.getAttribute('data-src');
+				});
+			});
+		});
+	</script>
+
+</body>
+</html>
